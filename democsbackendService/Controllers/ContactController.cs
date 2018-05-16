@@ -18,33 +18,33 @@ namespace democsbackendService.Controllers
             DomainManager = new EntityDomainManager<Contact>(context, Request);
         }
 
-        // GET tables/TodoItem
-        public IQueryable<Contact> GetAllTodoItems()
+        // GET tables/Contact
+        public IQueryable<Contact> GetAllContact()
         {
             return Query();
         }
 
-        // GET tables/TodoItem/48D68C86-6EA6-4C25-AA33-223FC9A27959
-        public SingleResult<Contact> GetTodoItem(string id)
+        // GET tables/Contact/48D68C86-6EA6-4C25-AA33-223FC9A27959
+        public SingleResult<Contact> GetContact(string id)
         {
             return Lookup(id);
         }
 
-        // PATCH tables/TodoItem/48D68C86-6EA6-4C25-AA33-223FC9A27959
-        public Task<Contact> PatchTodoItem(string id, Delta<Contact> patch)
+        // PATCH tables/Contact/48D68C86-6EA6-4C25-AA33-223FC9A27959
+        public Task<Contact> PatchContact(string id, Delta<Contact> patch)
         {
             return UpdateAsync(id, patch);
         }
 
-        // POST tables/TodoItem
-        public async Task<IHttpActionResult> PostTodoItem(Contact item)
+        // POST tables/Contact
+        public async Task<IHttpActionResult> PostContact(Contact item)
         {
             Contact current = await InsertAsync(item);
             return CreatedAtRoute("Tables", new { id = current.Id }, current);
         }
 
-        // DELETE tables/TodoItem/48D68C86-6EA6-4C25-AA33-223FC9A27959
-        public Task DeleteTodoItem(string id)
+        // DELETE tables/Contact/48D68C86-6EA6-4C25-AA33-223FC9A27959
+        public Task DeleteContact(string id)
         {
             return DeleteAsync(id);
         }

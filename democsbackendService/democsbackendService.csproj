@@ -183,9 +183,9 @@
     <Compile Include="DataObjects\Contact.cs" />
     <Compile Include="DataObjects\Customer.cs" />
     <Compile Include="DataObjects\TodoItem.cs" />
-    <Compile Include="Migrations\201802242158240_Initial.cs" />
-    <Compile Include="Migrations\201802242158240_Initial.Designer.cs">
-      <DependentUpon>201802242158240_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201805160442228_Initial.cs" />
+    <Compile Include="Migrations\201805160442228_Initial.Designer.cs">
+      <DependentUpon>201805160442228_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\democsbackendContext.cs" />
@@ -205,8 +205,11 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201802242158240_Initial.resx">
-      <DependentUpon>201802242158240_Initial.cs</DependentUpon>
+    <None Include="Properties\PublishProfiles\democsbackend - Web Deploy.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201805160442228_Initial.resx">
+      <DependentUpon>201805160442228_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

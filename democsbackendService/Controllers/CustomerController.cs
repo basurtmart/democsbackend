@@ -18,33 +18,33 @@ namespace democsbackendService.Controllers
             DomainManager = new EntityDomainManager<Customer>(context, Request);
         }
 
-        // GET tables/TodoItem
-        public IQueryable<Customer> GetAllTodoItems()
+        // GET tables/Customer
+        public IQueryable<Customer> GetAllCustomer()
         {
             return Query();
         }
 
-        // GET tables/TodoItem/48D68C86-6EA6-4C25-AA33-223FC9A27959
-        public SingleResult<Customer> GetTodoItem(string id)
+        // GET tables/Customer/48D68C86-6EA6-4C25-AA33-223FC9A27959
+        public SingleResult<Customer> GetCustomer(string id)
         {
             return Lookup(id);
         }
 
-        // PATCH tables/TodoItem/48D68C86-6EA6-4C25-AA33-223FC9A27959
-        public Task<Customer> PatchTodoItem(string id, Delta<Customer> patch)
+        // PATCH tables/Customer/48D68C86-6EA6-4C25-AA33-223FC9A27959
+        public Task<Customer> PatchCustomer(string id, Delta<Customer> patch)
         {
             return UpdateAsync(id, patch);
         }
 
-        // POST tables/TodoItem
-        public async Task<IHttpActionResult> PostTodoItem(Customer item)
+        // POST tables/Customer
+        public async Task<IHttpActionResult> PostCustomer(Customer item)
         {
             Customer current = await InsertAsync(item);
             return CreatedAtRoute("Tables", new { id = current.Id }, current);
         }
 
-        // DELETE tables/TodoItem/48D68C86-6EA6-4C25-AA33-223FC9A27959
-        public Task DeleteTodoItem(string id)
+        // DELETE tables/Customer/48D68C86-6EA6-4C25-AA33-223FC9A27959
+        public Task DeleteCustomer(string id)
         {
             return DeleteAsync(id);
         }

@@ -13,7 +13,7 @@ namespace democsbackendService.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201802242158240_Initial"; }
+            get { return "201805160442228_Initial"; }
         }
         
         string IMigrationMetadata.Source
