@@ -37,6 +37,7 @@ namespace democsbackendService.Controllers
         }
 
         // POST tables/Contact
+        [Authorize]
         public async Task<IHttpActionResult> PostContact(Contact item)
         {
             Contact current = await InsertAsync(item);
