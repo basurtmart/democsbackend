@@ -23,8 +23,6 @@ namespace democsbackendService.Models
         } 
 
         public DbSet<TodoItem> TodoItems { get; set; }
-        public DbSet<Customer> Customers { get; set; }
-        public DbSet<Contact> Contacts { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -32,6 +30,10 @@ namespace democsbackendService.Models
                 new AttributeToColumnAnnotationConvention<TableColumnAttribute, string>(
                     "ServiceTableColumn", (property, attributes) => attributes.Single().ColumnType.ToString()));
         }
+
+        public System.Data.Entity.DbSet<democsbackendService.DataObjects.Customer> Customers { get; set; }
+
+        public System.Data.Entity.DbSet<democsbackendService.DataObjects.Contact> Contacts { get; set; }
     }
 
 }

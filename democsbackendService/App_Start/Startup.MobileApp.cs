@@ -19,7 +19,8 @@ namespace democsbackendService
         {
             HttpConfiguration config = new HttpConfiguration();
 
-            config.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.Always;
+            config.IncludeErrorDetailPolicy =
+                IncludeErrorDetailPolicy.Always;
             //For more information on Web API tracing, see http://go.microsoft.com/fwlink/?LinkId=620686 
             //config.EnableSystemDiagnosticsTracing();
 
@@ -27,12 +28,14 @@ namespace democsbackendService
                 .UseDefaultConfiguration()
                 .ApplyTo(config);
 
-            var migrator = new DbMigrator(new Migrations.Configuration());
+            var migrator =
+                new DbMigrator(new Migrations.Configuration());
             migrator.Update();
+            
+            
             
             app.UseWebApi(config);
         }
-    }
-
+    }   
 }
 

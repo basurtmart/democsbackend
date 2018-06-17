@@ -21,7 +21,7 @@ namespace democsbackendService.Controllers
         // GET tables/Customer
         public IQueryable<Customer> GetAllCustomer()
         {
-            return Query();
+            return Query(); 
         }
 
         // GET tables/Customer/48D68C86-6EA6-4C25-AA33-223FC9A27959
@@ -33,7 +33,7 @@ namespace democsbackendService.Controllers
         // PATCH tables/Customer/48D68C86-6EA6-4C25-AA33-223FC9A27959
         public Task<Customer> PatchCustomer(string id, Delta<Customer> patch)
         {
-            return UpdateAsync(id, patch);
+             return UpdateAsync(id, patch);
         }
 
         // POST tables/Customer
@@ -46,7 +46,7 @@ namespace democsbackendService.Controllers
         // DELETE tables/Customer/48D68C86-6EA6-4C25-AA33-223FC9A27959
         public Task DeleteCustomer(string id)
         {
-            return DeleteAsync(id);
+             return DeleteAsync(id);
         }
     }
 }
